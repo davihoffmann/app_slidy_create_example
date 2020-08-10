@@ -1,4 +1,5 @@
 import 'package:app_slidy_create/app/modules/login/login_module.dart';
+import 'package:app_slidy_create/app/modules/tasks/tasks_module.dart';
 import 'package:app_slidy_create/app/pages/splash/splash_page.dart';
 
 import 'pages/splash/splash_controller.dart';
@@ -23,6 +24,7 @@ class AppModule extends MainModule {
         ),
         Router('/login', module: LoginModule()),
         Router('/home', module: HomeModule()),
+        Router('/tasks', module: TasksModule()),
       ];
 
   @override

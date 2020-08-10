@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  path_provider: ^1.6.11
+  hive: ^1.4.3
   shared_preferences: ^0.5.8
   rxdart: ^0.24.1
   dio: ^3.0.10

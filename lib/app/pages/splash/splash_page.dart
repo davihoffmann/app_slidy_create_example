@@ -17,7 +17,7 @@ class _SplashPageState extends ModularState<SplashPage, SplashController> {
     super.initState();
 
     Future.delayed(Duration(seconds: 2)).then((value) => {
-      Modular.to.pushReplacementNamed('/login')
+      Modular.to.pushReplacementNamed('/tasks')
     });
   }
 
