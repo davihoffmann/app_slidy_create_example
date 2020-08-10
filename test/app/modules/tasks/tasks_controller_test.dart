@@ -1,25 +1,35 @@
+import 'package:app_slidy_create/app/modules/tasks/tasks_controller.dart';
+import 'package:app_slidy_create/app/modules/tasks/tasks_module.dart';
+import 'package:app_slidy_create/app/shared/repositories/localstorage/local_storage_interface.dart';
+import 'package:app_slidy_create/app/shared/repositories/localstorage/local_storage_mock.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular/flutter_modular_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:app_slidy_create/app/modules/tasks/tasks_module.dart';
-
 void main() {
-  initModule(TasksModule());
-  // TasksController tasks;
-  //
-  setUp(() {
-    //     tasks = TasksModule.to.get<TasksController>();
+  initModule(
+    TasksModule(),
+    changeBinds: [
+      Bind<ILocalStorage>((i) => LocalStorageMock()),
+    ],
+  );
+
+  test('Click Save', () async {
+    final TasksController controller = Modular.get();
+    controller.text = 'davi';
+    controller.save();
+    expect(controller.list.length, 1);
+    expect(controller.list[0], 'davi');
+    // List<String> listLocalStorage = await Modular.get<ILocalStorage>().get('key');
+    // expect(listLocalStorage[0], 'davi');
   });
 
-  group('TasksController Test', () {
-    //   test("First Test", () {
-    //     expect(tasks, isInstanceOf<TasksController>());
-    //   });
-
-    //   test("Set Value", () {
-    //     expect(tasks.value, equals(0));
-    //     tasks.increment();
-    //     expect(tasks.value, equals(1));
-    //   });
+  test('Click Remove', () async {
+    final TasksController controller = Modular.get();
+    controller.text = 'davi';
+    controller.save();
+    controller.remove(0);
+    expect(controller.list.length, 0);
+    expect(controller.list.isEmpty, true);
   });
 }
