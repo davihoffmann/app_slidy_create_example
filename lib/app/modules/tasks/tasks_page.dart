@@ -1,4 +1,5 @@
 import 'package:app_slidy_create/app/modules/tasks/widgets/task_tile.dart';
+import 'package:app_slidy_create/app/shared/auth/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -13,12 +14,19 @@ class TasksPage extends StatefulWidget {
 }
 
 class _TasksPageState extends ModularState<TasksPage, TasksController> {
-  //use 'controller' variable to access controller
+  final _authController = Modular.get<AuthController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.exit_to_app),
+          onPressed: () async {
+            await _authController.logout();
+            Modular.to.pushReplacementNamed('/login');
+          },
+        ),
         title: TextField(
           onChanged: controller.setText,
         ),

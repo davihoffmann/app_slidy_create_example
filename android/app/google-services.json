@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1091449762953",
+    "firebase_url": "https://slidy-test.firebaseio.com",
+    "project_id": "slidy-test",
+    "storage_bucket": "slidy-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091449762953:android:fef93c7f509e38f67ac258",
+        "android_client_info": {
+          "package_name": "br.davihoffmann.appslidycreate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091449762953-15ogjcapo9240qma65lsudr9b17d340p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.davihoffmann.appslidycreate",
+            "certificate_hash": "ca5bc200a4e99f64c8dd6cd7a291a104b498036e"
+          }
+        },
+        {
+          "client_id": "1091449762953-iq7q6njrjan27nsdg11llls5326pamul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzMoVOAEnFMz7lybyXxH3BCB4Gs8i3pos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091449762953-iq7q6njrjan27nsdg11llls5326pamul.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1091449762953-mvp9sc17k040jtep806srjo40r32kott.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.davihoffmann.appslidycreate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

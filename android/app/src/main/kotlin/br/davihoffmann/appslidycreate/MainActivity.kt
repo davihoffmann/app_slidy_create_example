@@ -1,4 +1,4 @@
-package com.example.app_slidy_create
+package br.davihoffmann.appslidycreate
 
 import io.flutter.embedding.android.FlutterActivity
 

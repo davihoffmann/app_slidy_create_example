@@ -1,6 +1,9 @@
 import 'package:app_slidy_create/app/modules/login/login_module.dart';
 import 'package:app_slidy_create/app/modules/tasks/tasks_module.dart';
 import 'package:app_slidy_create/app/pages/splash/splash_page.dart';
+import 'package:app_slidy_create/app/shared/auth/auth_controller.dart';
+import 'package:app_slidy_create/app/shared/auth/repositories/auth_repository.dart';
+import 'package:app_slidy_create/app/shared/auth/repositories/auth_repository_interface.dart';
 
 import 'pages/splash/splash_controller.dart';
 import 'app_controller.dart';
@@ -14,6 +17,8 @@ class AppModule extends MainModule {
   List<Bind> get binds => [
         Bind((i) => SplashController()),
         Bind((i) => AppController()),
+        Bind<IAuthRepository>((i) => AuthRepository()),
+        Bind((i) => AuthController()),
       ];
 
   @override
